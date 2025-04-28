@@ -44,6 +44,8 @@ Additionally, the confusion matrix plots show that prediction errors generally d
 ![czesl_word_stopwords](https://github.com/user-attachments/assets/97d91147-f285-41ec-ae4e-bb8deb6e6cc7)
 
 
+![czesl_word_stopwords](https://github.com/user-attachments/assets/4816f26b-bb85-4507-be85-9a410bb4af91)
+
 
 
 
