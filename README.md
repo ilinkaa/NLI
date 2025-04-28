@@ -28,7 +28,7 @@ However, N-grams do not capture the long-term dependencies reflected in syntacti
 The best performing N-gram model across all types of n-grams is the Tf-IDF lemmas N-gram model which includes stopwords removal. Interestingly, Tf-IDF vectorization seems to help with the bigram accuracy for all types of of n-grams, whereas for count-based methods, the bigram accuracy tends to be lower than that of the unigram and bigram.The one exception is the count-based word analysis which includes stopwords, in which accuracy values for the bigram model are higher. 
 We note that for most models, similar kernel parameters were chosen, resulting in most models using a linear kernel, with the exception of the UPOS model, which relies on the poly kernel instead. 
 
-![image](https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76
+![image](https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76)
 
 ![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
 Figure: BAWE Lemma N-gram results with Tf-Idf and stopwords
