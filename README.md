@@ -44,7 +44,7 @@ Graph kernels allow to classify graph-like structures by examining their similar
 Using a corrected version of the sentences (where the corrections are only provided at word level) for the CzEsl, does not reveal significant changes in the metrics. 
 
 <p align="center">
-  <img src="[http://some_place.com/image.png](https://github.com/user-attachments/assets/1abb8a42-a162-41dd-a951-6fb0c51a18ee)" />
+  <img src="[https://github.com/user-attachments/assets/1abb8a42-a162-41dd-a951-6fb0c51a18ee]" />
 </p>
 
 
