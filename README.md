@@ -33,6 +33,7 @@ We note that for most models, similar kernel parameters were chosen, resulting i
 
 ![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
 
+![image](https://github.com/user-attachments/assets/70677aa7-5740-47a0-ba10-73df1e1066bf)
 
 
 ## CzEsl dataset:
