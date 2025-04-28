@@ -1,4 +1,4 @@
-# NLI
+# Native Language Identification
 Short project looking at Native Language Identification for two datasets (BAWE, a corpus of English academic texts, and CzEsl, a L2 Czech learner's dataset), by using a simple N-Gram classification method on different variables. 
 
 
@@ -42,6 +42,8 @@ In terms of dataset comparison, similar methods do well in both datasets despite
 
 Graph kernels allow to classify graph-like structures by examining their similarity. While there have been attempts at designing graph kernels for linguistic structures (Suzuki et al., 2003 proposed their HDAG kernel, which accounts for hierarchical dependency relations), these do not simultaneously take the structure and the node and the edge labels into account. We propose to use the Weisfeiler-Leman kernel for classification purposes, as it takes those elements into account. We obtain up to 0.64 accuracy on the CzEsl dataset and slightly lower values for BAWE, with the models exceeding their baselines for both datasets. Whether these results are due to the fact that this precomputed kernel accurately captures dependencies relations remains to be investigated, as it has not been used for classifying linguistic structures before. 
 Using a corrected version of the sentences (where the corrections are only provided at word level) for the CzEsl, does not reveal significant changes in the metrics. 
+
+![wl_kernel](https://github.com/user-attachments/assets/1abb8a42-a162-41dd-a951-6fb0c51a18ee)
 
 
 
