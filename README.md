@@ -31,6 +31,7 @@ We note that for most models, similar kernel parameters were chosen, resulting i
 ![image](https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76
 
 ![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
+Figure: BAWE Lemma N-gram results with Tf-Idf and stopwords
 
 ![image](https://github.com/user-attachments/assets/70677aa7-5740-47a0-ba10-73df1e1066bf)
 
@@ -42,10 +43,10 @@ Our second find is that using the corrected sentences which are provided by the 
 Additionally, the confusion matrix plots show that prediction errors generally do not coincide with closeness between languages, and reveals that our models have trouble generalizing to smaller classes. 
 
 ![czesl_word_stopwords](https://github.com/user-attachments/assets/97d91147-f285-41ec-ae4e-bb8deb6e6cc7)
-
+Figure: CzEsl results with non-corrected sentences
 
 ![czesl_word_stopwords](https://github.com/user-attachments/assets/4816f26b-bb85-4507-be85-9a410bb4af91)
-
+Figure: CzEsl results with corrected sentences
 
 
 
