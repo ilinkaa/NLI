@@ -29,9 +29,12 @@ The best performing N-gram model across all types of n-grams is the Tf-IDF lemma
 We note that for most models, similar kernel parameters were chosen, resulting in most models using a linear kernel, with the exception of the UPOS model, which relies on the poly kernel instead. 
 
 ![image](https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76)
+Figure: BAWE Lemma N-gram results with Tf-Idf and stopwords
+
+
 
 ![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
-Figure: BAWE Lemma N-gram results with Tf-Idf and stopwords
+Figure: Confusion matrix for BAWE Lemma N-gram results with Tf-Idf and stopwords
 
 
 
