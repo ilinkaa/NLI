@@ -96,6 +96,11 @@ The NGram analyzer can be run with command line arguments.
 
 Malmasi, S., Evanini, K., Cahill, A., Tetreault, J., Pugh, R., Hamill, C., ... & Qian, Y. (2017, September). A report on the 2017 native language identification shared task. In Proceedings of the 12th Workshop on Innovative Use of NLP for Building Educational Applications (pp. 62-75).
 
+Siglidis, G., Nikolentzos, G., Limnios, S., Giatsidis, C., Skianis, K., & Vazirgiannis, M. (2020). GraKeL: A graph kernel library in Python. *Journal of Machine Learning Research, 21*(54), 1–5.
+
 Suzuki, J., Hirao, T., Sasaki, Y., & Maeda, E. (2003, July). Hierarchical directed acyclic graph kernel: Methods for structured natural language data. In Proceedings of the 41st Annual Meeting of the Association for Computational Linguistics (pp. 32-39).
 
 Tydlitátová, L. (2016). Native Language Identification of L2 Speakers of Czech.
+
+
+
