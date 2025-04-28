@@ -5,8 +5,8 @@ Short project looking at Native Language Identification for two datasets (BAWE, 
 We examine different methods for native language identification for two different corpora, by making use of lexical, morphological and lexical data. 
 By looking at two different corpora (BAWE, which regroups essays written by college students from different L1 backgrounds with advanced proficiency in English, and Czesl, which compiles short texts written by non-native speakers of Czech), we hope to explore the way these different methods apply to two different languages while conducting an analysis on different corpora. 
 Our three objectives are: 
-Run a simple N-gram analysis for different variables on both the dataset and see how they perform.
-Evaluate the impact of the dataset on the method. Our corpora are not only different in terms of the language they represent, but in terms of level: while the BAWE dataset contains longer essays written by advanced learners, the Czesl texts come from language classes from people still actively learning the language. While we take inspiration from Tydlitátová (2016) for this study, we note that there was no consideration of how the selected levels might have impacted the results. 
+- Run a simple N-gram analysis for different variables on both the dataset and see how they perform.
+- Evaluate the impact of the dataset on the method. Our corpora are not only different in terms of the language they represent, but in terms of level: while the BAWE dataset contains longer essays written by advanced learners, the Czesl texts come from language classes from people still actively learning the language. While we take inspiration from Tydlitátová (2016) for this study, we note that there was no consideration of how the selected levels might have impacted the results. 
 We try to not only make use of n-grams, but also syntactic data, by trying out graph kernels on the dependency relations we obtained. 
 Finally, we also look at the errors annotation provided in the Czesl dataset and attempt SVM classification of L1 based on them.
 
@@ -28,13 +28,31 @@ However, N-grams do not capture the long-term dependencies reflected in syntacti
 The best performing N-gram model across all types of n-grams is the Tf-IDF lemmas N-gram model which includes stopwords removal. Interestingly, Tf-IDF vectorization seems to help with the bigram accuracy for all types of of n-grams, whereas for count-based methods, the bigram accuracy tends to be lower than that of the unigram and bigram.The one exception is the count-based word analysis which includes stopwords, in which accuracy values for the bigram model are higher. 
 We note that for most models, similar kernel parameters were chosen, resulting in most models using a linear kernel, with the exception of the UPOS model, which relies on the poly kernel instead. 
 
+
+![image](https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76)
+
+![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
+
+
+
 ## CzEsl dataset:
 
 We select texts at the B1-B2 level under the assumption that they are more likely to contain a higher type to token ratio and more varied structures. However, we find that the classifiers perform significantly better at the word level when including data from lower levels as well. Moreover, during some exploratory work, we saw that the level is much easier to predict than the L1 by using the same methods. Ideally, this claim could be supplemented by a more in-depth analysis of the type to token ratio of the dataset and the way it is distributed among the different levels / languages. 
 Our second find is that using the corrected sentences which are provided by the corpora actually improve the metrics on the word and lemma analysis, while the numbers of the upos and dependency labels analysis mostly stays the same. Moreover, as opposed to the BAWE dataset, metrics seem to increase with the n-gram range. 
 Additionally, the confusion matrix plots show that prediction errors generally do not coincide with closeness between languages, and reveals that our models have trouble generalizing to smaller classes. 
 
+![czesl_word_stopwords](https://github.com/user-attachments/assets/97d91147-f285-41ec-ae4e-bb8deb6e6cc7)
+
+
+
+
+
+
+
 Overall, this confirms that the classic N-gram approach using lemmas remains the most efficient one. Moreover, for the CzEsl dataset, accuracy tends to be lower when not using the corrected version of the sentence, probably because errors are not that common in the dataset (and are mostly annotated for spelling related mistakes, instead of providing grammatical information), which might create more outliers and make it harder for the model to generalize. 
+
+
+
 
 In terms of dataset comparison, similar methods do well in both datasets despite them being different in terms of content. The higher scores on the BAWE dataset might be simply due to the fact the data points available reflect longer texts and thus provide more information. 
 
@@ -43,9 +61,7 @@ In terms of dataset comparison, similar methods do well in both datasets despite
 Graph kernels allow to classify graph-like structures by examining their similarity. While there have been attempts at designing graph kernels for linguistic structures (Suzuki et al., 2003 proposed their HDAG kernel, which accounts for hierarchical dependency relations), these do not simultaneously take the structure and the node and the edge labels into account. We propose to use the Weisfeiler-Leman kernel for classification purposes, as it takes those elements into account. We obtain up to 0.64 accuracy on the CzEsl dataset and slightly lower values for BAWE, with the models exceeding their baselines for both datasets. Whether these results are due to the fact that this precomputed kernel accurately captures dependencies relations remains to be investigated, as it has not been used for classifying linguistic structures before. 
 Using a corrected version of the sentences (where the corrections are only provided at word level) for the CzEsl, does not reveal significant changes in the metrics. 
 
-<p align="center">
-  <img src="[https://github.com/user-attachments/assets/1abb8a42-a162-41dd-a951-6fb0c51a18ee]" />
-</p>
+![wl_kernel](https://github.com/user-attachments/assets/a71babb2-1031-4296-b186-ed38169e6b9c)
 
 
 ## Sources:
