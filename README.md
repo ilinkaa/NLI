@@ -52,10 +52,7 @@ Additionally, the confusion matrix plots show that prediction errors generally d
 
 
 
-Overall, this confirms that the classic N-gram approach using lemmas remains the most efficient one. Moreover, for the CzEsl dataset, accuracy tends to be lower when not using the corrected version of the sentence, probably because errors are not that common in the dataset (and are mostly annotated for spelling related mistakes, instead of providing grammatical information), which might create more outliers and make it harder for the model to generalize. 
-
-
-
+Overall, this confirms that the classic N-gram approach using lemmas remains the most efficient one. Moreover, for the CzEsl dataset, accuracy tends to be lower when using the corrected version of the sentence. This could possibly mean that errors add information to the N-gram models. 
 
 In terms of dataset comparison, similar methods do well in both datasets despite them being different in terms of content. The higher scores on the BAWE dataset might be simply due to the fact the data points available reflect longer texts and thus provide more information. 
 
