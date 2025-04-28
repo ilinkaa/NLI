@@ -36,8 +36,6 @@ We note that for most models, similar kernel parameters were chosen, resulting i
 </div>
 
 
-![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
-Figure: Confusion matrix for BAWE Lemma N-gram results with Tf-Idf and stopwords
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101" alt="Confusion matrix for BAWE Lemma N-gram results with Tf-Idf and stopwords" width="500"/>
@@ -76,15 +74,22 @@ In terms of dataset comparison, similar methods do well in both datasets despite
 Graph kernels allow to classify graph-like structures by examining their similarity. While there have been attempts at designing graph kernels for linguistic structures (Suzuki et al., 2003 proposed their HDAG kernel, which accounts for hierarchical dependency relations), these do not simultaneously take the structure and the node and the edge labels into account. We propose to use the Weisfeiler-Leman kernel for classification purposes, as it takes those elements into account. We obtain up to 0.64 accuracy on the CzEsl dataset and slightly lower values for BAWE, with the models exceeding their baselines for both datasets. Whether these results are due to the fact that this precomputed kernel accurately captures dependencies relations remains to be investigated, as it has not been used for classifying linguistic structures before. 
 Using a corrected version of the sentences (where the corrections are only provided at word level) for the CzEsl, does not reveal significant changes in the metrics. 
 
-![wl_kernel](https://github.com/user-attachments/assets/a71babb2-1031-4296-b186-ed38169e6b9c)
 
-Figure: Scores for SVM classification with a Weisfeiler-Leman precomputed kernel
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a71babb2-1031-4296-b186-ed38169e6b9c" alt="Scores for SVM classification with a Weisfeiler-Leman precomputed kernel" width="500"/>
+  <p><strong>Figure:</strong>Figure: Scores for SVM classification with a Weisfeiler-Leman precomputed kernel</p>
+</div>
+
+
 
 
 ## Error annotation
 
 The CzEsl dataset is annotated for errors at the word level. Most of the annotated errors have to do with orthography (some are trivial, such as capitalization mistakes). As Czech orthography accounts for vowel length variation, it can be argued that this type of spelling error could potentially contribute to identifying the learner's native language. To explore this, we use mutual information in order to identify which error types are relevant for classification, before feeding the n-most relevant variables to a SVM classifier. However, the values we obtain with mutual information reveal that there is at most 0.10 difference between the highest mutual information value and the lowest one. This means that we consistently obtain similar accuracy values with the baseline. 
 
+## Script
+
+The NGram analyzer can be run with command line arguments.
 
 
 ## Sources:
