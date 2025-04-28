@@ -31,6 +31,11 @@ We note that for most models, similar kernel parameters were chosen, resulting i
 ![BAWE Lemma N-gram results with Tf-Idf and stopwords](https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76)  
 **Figure:** BAWE Lemma N-gram results with Tf-Idf and stopwords
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76" alt="BAWE Lemma N-gram results with Tf-Idf and stopwords" width="500"/>
+  <p><strong>Figure:</strong> BAWE Lemma N-gram results with Tf-Idf and stopwords</p>
+</div>
+
 
 ![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
 Figure: Confusion matrix for BAWE Lemma N-gram results with Tf-Idf and stopwords
@@ -71,9 +76,7 @@ Figure: Scores for SVM classification with a Weisfeiler-Leman precomputed kernel
 
 The CzEsl dataset is annotated for errors at the word level. Most of the annotated errors have to do with orthography (some are trivial, such as capitalization mistakes). As Czech orthography accounts for vowel length variation, it can be argued that this type of spelling error could potentially contribute to identifying the learner's native language. To explore this, we use mutual information in order to identify which error types are relevant for classification, before feeding the n-most relevant variables to a SVM classifier. However, the values we obtain with mutual information reveal that there is at most 0.10 difference between the highest mutual information value and the lowest one. This means that we consistently obtain similar accuracy values with the baseline. 
 
-<p align="center">
-  <img width="460" height="300" src=![wl_kernel](https://github.com/user-attachments/assets/a71babb2-1031-4296-b186-ed38169e6b9c)>
-</p>
+
 
 ## Sources:
 
