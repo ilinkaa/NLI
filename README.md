@@ -28,8 +28,7 @@ However, N-grams do not capture the long-term dependencies reflected in syntacti
 The best performing N-gram model across all types of n-grams is the Tf-IDF lemmas N-gram model which includes stopwords removal. Interestingly, Tf-IDF vectorization seems to help with the bigram accuracy for all types of of n-grams, whereas for count-based methods, the bigram accuracy tends to be lower than that of the unigram and bigram.The one exception is the count-based word analysis which includes stopwords, in which accuracy values for the bigram model are higher. 
 We note that for most models, similar kernel parameters were chosen, resulting in most models using a linear kernel, with the exception of the UPOS model, which relies on the poly kernel instead. 
 
-![BAWE Lemma N-gram results with Tf-Idf and stopwords](https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76)  
-**Figure:** BAWE Lemma N-gram results with Tf-Idf and stopwords
+
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/b15031b8-503e-462f-aed8-1da497bfbc76" alt="BAWE Lemma N-gram results with Tf-Idf and stopwords" width="500"/>
@@ -40,6 +39,11 @@ We note that for most models, similar kernel parameters were chosen, resulting i
 ![lemmas_stop_tf_idf_conf](https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101)
 Figure: Confusion matrix for BAWE Lemma N-gram results with Tf-Idf and stopwords
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d11202ea-8174-48b3-a4fe-b4481bd7b101" alt="Confusion matrix for BAWE Lemma N-gram results with Tf-Idf and stopwords" width="500"/>
+  <p><strong>Figure:</strong> Confusion matrix for BAWE Lemma N-gram results with Tf-Idf and stopwords</p>
+</div>
+
 
 
 ## CzEsl dataset:
@@ -48,12 +52,17 @@ We select texts at the B1-B2 level under the assumption that they are more likel
 Our second find is that using the corrected sentences which are provided by the corpora actually improve the metrics on the word and lemma analysis, while the numbers of the upos and dependency labels analysis mostly stays the same. Moreover, as opposed to the BAWE dataset, metrics seem to increase with the n-gram range. 
 Additionally, the confusion matrix plots show that prediction errors generally do not coincide with closeness between languages, and reveals that our models have trouble generalizing to smaller classes. 
 
-![czesl_word_stopwords](https://github.com/user-attachments/assets/97d91147-f285-41ec-ae4e-bb8deb6e6cc7)
-Figure: CzEsl results with non-corrected sentences
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/97d91147-f285-41ec-ae4e-bb8deb6e6cc7" alt="CzEsl results with non-corrected sentences" width="500"/>
+  <p><strong>Figure:</strong> CzEsl results with non-corrected sentences</p>
+</div>
 
-![czesl_word_stopwords](https://github.com/user-attachments/assets/4816f26b-bb85-4507-be85-9a410bb4af91)
-Figure: CzEsl results with corrected sentences
 
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4816f26b-bb85-4507-be85-9a410bb4af91" alt="CzEsl results with corrected sentences" width="500"/>
+  <p><strong>Figure:</strong> CzEsl results with corrected sentences</p>
+</div>
 
 
 
