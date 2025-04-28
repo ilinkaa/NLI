@@ -65,6 +65,8 @@ Using a corrected version of the sentences (where the corrections are only provi
 
 ![wl_kernel](https://github.com/user-attachments/assets/a71babb2-1031-4296-b186-ed38169e6b9c)
 
+Figure: Scores for SVM classification with a Weisfeiler-Leman precomputed kernel
+
 
 ## Error annotation
 
