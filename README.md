@@ -21,14 +21,14 @@ After obtaining the N-grams, we perform both count and tf-idf based vectorizatio
 However, N-grams do not capture the long-term dependencies reflected in syntactic information. We propose a novel approach, which attempts classification based on dependency relations using the graph kernels. We convert the dependency relations into a tree format and use the precomputed Weisfeiler-Lehman kernel from the GraKel library, which was initially designed to capture isomorphism between two graphs by making use of both the node and the edge data. By using this, we could in theory base the classification on the similarity between types of sentence structures and see how it relates to L1. 
 
 
-##Results
+## Results
 
-#BAWE dataset:
+### BAWE dataset:
 
 The best performing N-gram model across all types of n-grams is the Tf-IDF lemmas N-gram model which includes stopwords removal. Interestingly, Tf-IDF vectorization seems to help with the bigram accuracy for all types of of n-grams, whereas for count-based methods, the bigram accuracy tends to be lower than that of the unigram and bigram.The one exception is the count-based word analysis which includes stopwords, in which accuracy values for the bigram model are higher. 
 We note that for most models, similar kernel parameters were chosen, resulting in most models using a linear kernel, with the exception of the UPOS model, which relies on the poly kernel instead. 
 
-#CzEsl dataset:
+## CzEsl dataset:
 
 We select texts at the B1-B2 level under the assumption that they are more likely to contain a higher type to token ratio and more varied structures. However, we find that the classifiers perform significantly better at the word level when including data from lower levels as well. Moreover, during some exploratory work, we saw that the level is much easier to predict than the L1 by using the same methods. Ideally, this claim could be supplemented by a more in-depth analysis of the type to token ratio of the dataset and the way it is distributed among the different levels / languages. 
 Our second find is that using the corrected sentences which are provided by the corpora actually improve the metrics on the word and lemma analysis, while the numbers of the upos and dependency labels analysis mostly stays the same. Moreover, as opposed to the BAWE dataset, metrics seem to increase with the n-gram range. 
@@ -38,7 +38,7 @@ Overall, this confirms that the classic N-gram approach using lemmas remains the
 
 In terms of dataset comparison, similar methods do well in both datasets despite them being different in terms of content. The higher scores on the BAWE dataset might be simply due to the fact the data points available reflect longer texts and thus provide more information. 
 
-##Weisfeiler Lehman kernel
+## Weisfeiler Lehman kernel
 
 Graph kernels allow to classify graph-like structures by examining their similarity. While there have been attempts at designing graph kernels for linguistic structures (SOURCE, 2003 proposed their HDAG kernel, which accounts for hierarchical dependency relations), these do not simultaneously take the structure and the node and the edge labels into account. We propose to use the Weisfeiler-Lehman kernel for classification purposes
 
