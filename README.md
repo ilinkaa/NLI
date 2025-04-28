@@ -64,6 +64,12 @@ Using a corrected version of the sentences (where the corrections are only provi
 ![wl_kernel](https://github.com/user-attachments/assets/a71babb2-1031-4296-b186-ed38169e6b9c)
 
 
+## Error annotation
+
+The CzEsl dataset is annotated for errors at the word level. Most of the annotated errors have to do with orthography (some are trivial, such as capitalization mistakes). As Czech orthography accounts for vowel length variation, it can be argued that this type of spelling error could potentially contribute to identifying the learner's native language. To explore this, we use mutual information in order to identify which error types are relevant for classification, before feeding the n-most relevant variables to a SVM classifier. However, the values we obtain with mutual information reveal that there is at most 0.10 difference between the highest mutual information value and the lowest one. This means that we consistently obtain similar accuracy values with the baseline. 
+
+
+
 ## Sources:
 
 Malmasi, S., Evanini, K., Cahill, A., Tetreault, J., Pugh, R., Hamill, C., ... & Qian, Y. (2017, September). A report on the 2017 native language identification shared task. In Proceedings of the 12th Workshop on Innovative Use of NLP for Building Educational Applications (pp. 62-75).
